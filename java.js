@@ -5,7 +5,7 @@ function init(){
     `
     <div>
         <h1> Lista de productos</h1> 
-        <h4>Producto A</h4>
+        <h4 id="nombreProducto">Producto A</h4>
         <input type="number" name="" id="input1">
         <button onclick="agregar()" type="button" class="btn btn-success boton1">Agregar productos al carrito</button>
     </div>
@@ -15,8 +15,10 @@ function init(){
 function agregar(){
     var carrito=document.getElementById("carrito")
     var cantidad=document.getElementById("input1").value
+    var nombre=document.getElementById("nombreProducto")
     carrito=carrito.innerHTML=
     `
     <h1>cantidad: ${cantidad}</h1>
+    <h1> ${nombre}</h1>
     `
 }
